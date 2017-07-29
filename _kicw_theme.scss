@@ -1,0 +1,87 @@
+$kicw_theme_color: #fca503;
+
+// 主题生成器
+@mixin kicw_theme() {
+  .kicw-plan {
+    border: 3px solid #e0e0e0;
+    &:hover {
+      border: 5px solid $kicw_theme_color;
+    }
+  }
+
+  // 总标题
+  .kicw-caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  // 行
+  .kicw-row {
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: 1rem;
+    width: 90%;
+    &.full {
+      width: 100%;
+    }
+  }
+
+  // top行的背景色
+  .kicw-row.top {
+    background: #f0f0f0;
+  }
+
+  // 斑马线样式
+  .kicw.stripped {
+    .kicw-row:nth-child(odd) {
+      background-color: #fff;
+    }
+    .kicw-row:nth-child(even) {
+      background-color: #fafafa;
+    }
+    .kicw-row.top {
+      background: #f0f0f0;
+    }
+  }
+
+  // 文字大小
+  .kicw-row {
+    &.x,
+    .x {
+      font-size: 1.1rem;
+    }
+    &.xx,
+    .xx {
+      font-size: 1.25rem;
+    }
+    &.xxx,
+    .xxx {
+      font-size: 2rem;
+    }
+    &.s,
+    .s {
+      font-size: 0.9rem;
+    }
+  }
+
+  // border线
+  .kicw-row.border-top {
+    border-top: 2px dashed #c0c0c0;
+  }
+  .kicw-row.border-bottom {
+    border-bottom: 2px dashed #c0c0c0;
+  }
+
+  .kicw-btn {
+    background-color: $kicw_theme_color;
+    color: #fff;
+  }
+}
+
+// 几种固定的高度
+@mixin kicw_row_height($lines, $line_height: 2rem, $padding_top:0, $padding_bottom:0) {
+  .kick-row.line#{$lines} {
+    height: $lines * $line_height + $padding_top + $padding_bottom;
+  }
+}
+

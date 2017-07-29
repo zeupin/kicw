@@ -1,0 +1,13 @@
+// 基础架构
+@import "_kicw_base.scss";
+
+// 主题生成器
+@import "_kicw_theme.scss";
+
+// 默认样式
+@include kicw_theme();
+
+@include kicw_row_height(1, 2rem, 1rem, 1rem);
+@include kicw_row_height(2, 2rem, 1rem, 1rem);
+@include kicw_row_height(3, 2rem, 1rem, 1rem);
+@include kicw_row_height(4, 2rem, 1rem, 1rem);
