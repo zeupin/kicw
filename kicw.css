@@ -22,13 +22,13 @@
 
 .kicw-caption { font-size: 1.5rem; font-weight: bold; }
 
-.kicw-row { font-size: 1rem; line-height: 2rem; padding: 1rem; width: 90%; }
+.kicw-row { font-size: 1rem; line-height: 2rem; padding: 0.5rem 0; width: 90%; }
 .kicw-row.full { width: 100%; }
 
 .kicw-row.top { background: #f0f0f0; }
 
-.kicw.stripped .kicw-row:nth-child(odd) { background-color: #fff; }
-.kicw.stripped .kicw-row:nth-child(even) { background-color: #fafafa; }
+.kicw.stripped .kicw-row:nth-of-type(odd) { background-color: #fff; }
+.kicw.stripped .kicw-row:nth-of-type(even) { background-color: #fafafa; }
 .kicw.stripped .kicw-row.top { background: #f0f0f0; }
 
 .kicw-row.x, .kicw-row .x { font-size: 1.1rem; }
@@ -41,6 +41,8 @@
 .kicw-row.border-bottom { border-bottom: 2px dashed #c0c0c0; }
 
 .kicw-btn { background-color: #fca503; color: #fff; }
+
+.kicw-btn:hover { background-color: #fca503; font-weight: bold; }
 
 .kick-row.line1 { height: 4rem; }
 

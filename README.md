@@ -21,8 +21,6 @@
 
 | 变量 | 默认值 | 说明
 |------|-------|------
-
-| $kicw_plan_border       | 3px solid #e0e0e0
-| $kicw_plan_border_hover | 5px solid #00ffcc
-
-| $kicw_row_top_bgcolor | #
+| $kicw_plan_border       | 3px solid #e0e0e0 |
+| $kicw_plan_border_hover | 5px solid #00ffcc |
+| $kicw_row_top_bgcolor |

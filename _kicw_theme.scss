@@ -19,7 +19,7 @@ $kicw_theme_color: #fca503;
   .kicw-row {
     font-size: 1rem;
     line-height: 2rem;
-    padding: 1rem;
+    padding: 0.5rem 0;
     width: 90%;
     &.full {
       width: 100%;
@@ -33,10 +33,10 @@ $kicw_theme_color: #fca503;
 
   // 斑马线样式
   .kicw.stripped {
-    .kicw-row:nth-child(odd) {
+    .kicw-row:nth-of-type(odd) {
       background-color: #fff;
     }
-    .kicw-row:nth-child(even) {
+    .kicw-row:nth-of-type(even) {
       background-color: #fafafa;
     }
     .kicw-row.top {
@@ -75,6 +75,10 @@ $kicw_theme_color: #fca503;
   .kicw-btn {
     background-color: $kicw_theme_color;
     color: #fff;
+  }
+  .kicw-btn:hover {
+    background-color: $kicw_theme_color;
+    font-weight: bold;
   }
 }
 
