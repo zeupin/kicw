@@ -1,13 +1,149 @@
-// 基础架构
-@import "_kicw_base.scss";
+$kicw_fontsize: 0.9rem;   // 基准字体大小
 
-// 主题生成器
-@import "_kicw_theme.scss";
+.kicw,
+.kicw-item,
+.kicw-head,
+.kicw-foot,
+.kicw-row,
+.kicw-ribbon {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
 
-// 默认样式
-@include kicw_theme();
+// 主类
+.kicw {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  font-size: $kicw_fontsize;
+  line-height: 2;
 
-@include kicw_row_height(1, 2rem, 1rem, 1rem);
-@include kicw_row_height(2, 2rem, 1rem, 1rem);
-@include kicw_row_height(3, 2rem, 1rem, 1rem);
-@include kicw_row_height(4, 2rem, 1rem, 1rem);
+  ul,
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+// 报价方案
+// 1. hover时的动效
+.kicw-item {
+  display: inline-block;
+  margin-top: 1rem; // (1)
+  vertical-align: top;
+  border: 1px solid #e0e0e0;
+  width: 12rem;
+
+  &:hover {
+    margin-top: 0; // (1)
+    border: 1px solid #35d5f5;
+  }
+}
+
+// 单元头和单元尾固定为100%宽
+.kicw-head,
+.kicw-foot {
+  display: block;
+  width: 100%;
+}
+
+.kicw-head {
+  font-size: 1.2em;
+  line-height: 2.5;
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+.kicw-foot {
+}
+
+// row
+.kicw-row {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em 0;
+}
+
+// 预制row里面的文字的样式
+.kicw-row {
+  &.b,
+  .b {
+    font-weight: bold;
+  }
+}
+
+// 斑马线样式
+.kicw.stripped {
+  .kicw-row:nth-of-type(odd) {
+    background-color: #fafafa;
+  }
+  .kicw-row:nth-of-type(even) {
+    background-color: #fff;
+  }
+}
+
+// 文字大小
+.kicw-row {
+  &.x,
+  .x {
+    font-size: 1.1em;
+  }
+  &.xx,
+  .xx {
+    font-size: 1.25em;
+  }
+  &.xxx,
+  .xxx {
+    font-size: 2em;
+  }
+  &.s,
+  .s {
+    font-size: 0.9em;
+  }
+}
+
+// 按钮
+.kicw-btn {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em 0;
+  width: 80%;
+  border-radius: 0.3em;
+  background-color: #35d5f5;
+  color: #fff;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+// 飘带
+.kicw-ribbon {}
+
+
+// 预制的固定行高，供不同item高度对齐用
+// .kicw-row.line1   1行
+// .kicw-row.line2   2行
+// .kicw-row.line3   3行
+// .kicw-row.line4   4行
+@mixin kicw_row_height(
+  $lines,
+  $line_height,
+  $padding_top: 0.5em,
+  $padding_bottom: 0.5em) {
+
+  .kick-row.line#{$lines} {
+    height: $lines * $line_height + $padding_top + $padding_bottom;
+  }
+}
+@include kicw_row_height(1, $kicw_fontsize * 2, $kicw_fontsize / 2, $kicw_fontsize / 2);
+@include kicw_row_height(2, $kicw_fontsize * 2, $kicw_fontsize / 2, $kicw_fontsize / 2);
+@include kicw_row_height(3, $kicw_fontsize * 2, $kicw_fontsize / 2, $kicw_fontsize / 2);
+@include kicw_row_height(4, $kicw_fontsize * 2, $kicw_fontsize / 2, $kicw_fontsize / 2);

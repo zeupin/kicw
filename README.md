@@ -1,26 +1,36 @@
 # kicw 报价表
 
+![](demo1.png)
+
 ## 类
 
 | 类 | 修饰 | 说明
 |----|------|----
 | .kicw         | | 主类
-| .kicw         | .stripped | 斑马纹
-| .kicw-caption | | 报价表的大标题
-| .kicw-plan    | | 一个报价方案
+| .kicw         | .stripped | row部分使用奇偶行斑马纹
+| .kicw-item    | | 一个报价方案
+| .kicw-head    | | item头
+| .kicw-foot    | | item尾
 | .kicw-row     | | 行
-| .kicw-row     | .top    | 首行
-| .kicw-row     | .bottom | 尾行
 | .kicw-row     | .x      | 字体加大1
 | .kicw-row     | .xx     | 字体加大2
 | .kicw-row     | .xxx    | 字体加大3
 | .kicw-row     | .s      | 字体减小1
 | .kicw-row     | .b      | 粗体
+| .kicw-row     | .line1      | 1行高（供不同item高度对齐用）
+| .kicw-row     | .line2      | 2行高
+| .kicw-row     | .line3      | 3行高
+| .kicw-row     | .line4      | 4行高
+| .kicw-ribbon | | 飘带
 
-## 变量
+## 层次关系
 
-| 变量 | 默认值 | 说明
-|------|-------|------
-| $kicw_plan_border       | 3px solid #e0e0e0 |
-| $kicw_plan_border_hover | 5px solid #00ffcc |
-| $kicw_row_top_bgcolor |
+```
+.kicw
+    .kicw-item
+        .kicw-head
+        .kicw-row
+        .kicw-row
+        .kicw-row
+        .kicw-foot
+```
