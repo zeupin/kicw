@@ -4,14 +4,14 @@
 .kicw ul, .kicw li { list-style-type: none; }
 .kicw a { text-decoration: none; }
 
-.kicw-item { display: inline-block; margin-top: 1rem; vertical-align: top; border: 1px solid #e0e0e0; width: 12rem; }
+.kicw-item { display: inline-block; margin-top: 1rem; vertical-align: top; border: 1px solid #e0e0e0; }
 .kicw-item:hover { margin-top: 0; border: 1px solid #35d5f5; }
 
 .kicw-head, .kicw-foot { display: block; width: 100%; }
 
 .kicw-head { font-size: 1.2em; line-height: 2.5; font-weight: bold; background-color: #f0f0f0; }
 
-.kicw-row { display: block; text-align: center; margin-left: auto; margin-right: auto; padding: 0.5em 0; }
+.kicw-row { display: block; text-align: center; margin-left: auto; margin-right: auto; padding: 0.5em 1em; }
 
 .kicw-row.b, .kicw-row .b { font-weight: bold; }
 

@@ -37,7 +37,7 @@ $kicw_fontsize: 0.9rem;   // 基准字体大小
   margin-top: 1rem; // (1)
   vertical-align: top;
   border: 1px solid #e0e0e0;
-  width: 12rem;
+  //width: 12rem;
 
   &:hover {
     margin-top: 0; // (1)
@@ -68,7 +68,7 @@ $kicw_fontsize: 0.9rem;   // 基准字体大小
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em 0;
+  padding: 0.5em 1em;
 }
 
 // 预制row里面的文字的样式
