@@ -111,10 +111,9 @@ $kicw_fontsize: 0.9rem;   // 基准字体大小
 
 // 按钮
 .kicw-btn {
-  display: block;
-  margin: 1em auto;
-  padding: 0.5em 0;
-  width: 80%;
+  display: inline-block;
+  margin: 1em 1em;
+  padding: 0.5em 1em;
   border-radius: 0.3em;
   background-color: #35d5f5;
   color: #fff;

@@ -23,7 +23,7 @@
 .kicw-row.xxx, .kicw-row .xxx { font-size: 2em; }
 .kicw-row.s, .kicw-row .s { font-size: 0.9em; }
 
-.kicw-btn { display: block; margin: 1em auto; padding: 0.5em 0; width: 80%; border-radius: 0.3em; background-color: #35d5f5; color: #fff; }
+.kicw-btn { display: inline-block; margin: 1em 1em; padding: 0.5em 1em; border-radius: 0.3em; background-color: #35d5f5; color: #fff; }
 .kicw-btn:hover { font-weight: bold; }
 
 .kick-row.line1 { height: 2.7rem; }
