@@ -8,6 +8,13 @@
 |----|------|----
 | .kicw         | | 主类
 | .kicw         | .stripped | row部分使用奇偶行斑马纹
+| .kicw-2       | | 每行2个item
+| .kicw-3       | | 每行3个item
+| .kicw-4       | | 每行4个item
+| .kicw-5       | | 每行5个item
+| .kicw-6       | | 每行6个item
+| .kicw-7       | | 每行7个item
+| .kicw-8       | | 每行8个item
 | .kicw-item    | | 一个报价方案
 | .kicw-head    | | item头
 | .kicw-foot    | | item尾
@@ -26,7 +33,7 @@
 ## 层次关系
 
 ```
-.kicw
+.kicw [.kicw-4] [.stripped]
     .kicw-item
         .kicw-head
         .kicw-row
