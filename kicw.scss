@@ -18,7 +18,7 @@ $kicw_fontsize: 0.9rem;   // 基准字体大小
   padding: 0;
   overflow: hidden;
   text-align: center;
-  font-size: $kicw_fontsize;
+  font-size: 0;
   line-height: 2;
 
   ul,
@@ -30,6 +30,29 @@ $kicw_fontsize: 0.9rem;   // 基准字体大小
   }
 }
 
+
+// 设置item的宽度值，默认间隙为1%
+@mixin kicw_item_width($cols, $gutter: 1%) {
+  .kicw-#{$cols} {
+    & > .kicw-item {
+      width: (100% - $gutter * ($cols - 1)) / $cols;
+      margin-right: $gutter;
+
+      &:nth-of-type(#{$cols}n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+@include kicw_item_width(2, 1%);
+@include kicw_item_width(3, 1%);
+@include kicw_item_width(4, 1%);
+@include kicw_item_width(5, 1%);
+@include kicw_item_width(6, 1%);
+@include kicw_item_width(7, 1%);
+@include kicw_item_width(8, 1%);
+
+
 // 报价方案
 // 1. hover时的动效
 .kicw-item {
@@ -37,7 +60,7 @@ $kicw_fontsize: 0.9rem;   // 基准字体大小
   margin-top: 1rem; // (1)
   vertical-align: top;
   border: 1px solid #e0e0e0;
-  //width: 12rem;
+  font-size: $kicw_fontsize;
 
   &:hover {
     margin-top: 0; // (1)
